@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "php": "^7.3|^8.0",
+        "php": ">=7.3",
         "yng/yng-framework": "dev-main",
         "yng/yng-orm": "dev-main",
         "yng/yng-filesystem": "dev-main"
