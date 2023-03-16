@@ -1,3 +1,15 @@
+# YngPHP 框架
+基于PHP7.3开发
+
+## 安装所需环境
+
+php扩展:
+```sh
+php_mbstring
+
+```
+
+
 # 配置伪静态
 ```shell
 # apache
@@ -16,4 +28,15 @@ location / {
         break;
     }
 }
+```
+
+
+#### 安装教程
+```sh
+composer create-project yng/yng projectname
+
+
+# 安装dev版本
+composer 
+composer create-project --stability=dev yng/yng projectname
 ```
