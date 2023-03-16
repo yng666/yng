@@ -1,0 +1,31 @@
+{
+    "name": "yng/yng-trace",
+    "description": "yngphp debug trace",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Yng",
+            "email": "840638148@qq.com"
+        }
+    ],
+    "require": {
+    	"php": ">=7.1.0",
+        "yng/framework": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yng\\Trace\\": "src/"
+        }
+    },
+    "extra": {
+        "yng":{
+            "services":[
+                "Yng\\Trace\\Service"
+            ],
+            "config":{
+                "trace": "src/config.php"
+            }
+        }
+    },    
+    "minimum-stability": "dev"
+}

@@ -1,0 +1,36 @@
+{
+    "name": "yng/yng-helper",
+    "description": "The YngPHP1.0 Helper Package",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "YNG",
+            "email": "840638148@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yng\\": "src/"
+        },
+        "files": [
+            "src/helper.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit --colors"
+    },
+    "scripts-descriptions": {
+        "test": "Run all tests."
+    }
+}
