@@ -2,6 +2,7 @@
     "name": "yng/yng",
     "description": "A simple php framework",
     "license": "MIT",
+    "type": "library",
     "authors": [
         {
             "name": "YNG",
