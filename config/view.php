@@ -9,7 +9,7 @@ return [
     */
 
     'paths' => [
-        resource_path('views'),
+        app_path('views'),
     ],
 
     /*

@@ -12,8 +12,6 @@ header('Content-type:text/html;charset=utf-8');
 require_once __DIR__ . '/../vendor/autoload.php';
 
 
-ini_set('display_errors','On');
-
 // 开始执行
 use Yng\App;
 
