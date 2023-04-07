@@ -1,11 +1,11 @@
 <?php
-use app\ExceptionHandle;
-use app\Request;
-use Yng\trace\Service;
+use Yng\Exception\Handle as ExceptionHandle;
+use Yng\Request;
+use Yng\Trace\Service;
 
 // 容器提供者定义文件
 return [
     'Yng\Request'           => Request::class,
-    'Yng\exception\Handle'  => ExceptionHandle::class,
-    'Yng\trace\Service'     => Service::class,
+    'Yng\Exception\Handle'  => ExceptionHandle::class,
+    'Yng\Trace\Service'     => Service::class,
 ];

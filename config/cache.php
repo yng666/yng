@@ -19,7 +19,7 @@ return [
     'stores' => [
         'file' => [
             'driver' => 'file',
-            'path' => storage_path('framework/cache/data'),
+            'path' => storage_path('framework'.DIRECTORY_SEPARATOR.'cache'.DIRECTORY_SEPARATOR.'data'),
         ],
 
         'memcached' => [
@@ -43,8 +43,12 @@ return [
 
         'redis' => [
             'driver' => 'redis',
-            'connection' => 'cache',
-            'lock_connection' => 'default',
+            // 'connection' => 'cache',
+            'prefix' => env('CACHE_PREFIX', env('APP_NAME', 'Yng').'_CACHE_'),
+            // 'lock_connection' => 'default',
+            'host'       => env('REDIS_HOST','127.0.0.1'),
+            'port'       => env('REDIS_PORT', 6379),
+            'password'   => env('REDIS_PASSWORD','')
         ],
     ],
 

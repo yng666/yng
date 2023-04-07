@@ -7,16 +7,29 @@ return [
     | 视图存放路径
     |--------------------------------------------------------------------------
     */
-
-    'paths' => [
-        app_path('views'),
-    ],
+    'paths' => resource_path('views'),
 
     /*
     |--------------------------------------------------------------------------
     | 已编译视图路径
     |--------------------------------------------------------------------------
     */
-    'compiled' => env('VIEW_COMPILED_PATH',realpath(storage_path('framework/views'))),
+    'cache_path' => env('VIEW_COMPILED_PATH',storage_path('framework'.DIRECTORY_SEPARATOR.'views')),
+    
+    // 模板引擎类型使用Blade
+    'type'          => 'Blade',
+
+    // 模板后缀
+    'view_suffix'  => '.blade.php',
+    'view_depr'    => '/',
+    // 模板引擎普通标签开始标记
+    'tpl_begin'    => '{{',
+    // 模板引擎普通标签结束标记
+    'tpl_end'      => '}}',
+    // 标签库标签开始标记
+    'taglib_begin' => '{{',
+    // 标签库标签结束标记
+    'taglib_end'   => '}}',
+
 
 ];

@@ -30,6 +30,7 @@ return [
             'prefix'         => env('DB_PREFIX', ''),
             'prefix_indexes' => true,
             'strict'         => true,
+            'trigger_sql'    => env('APP_DEBUG', true),//是否开启sql监听
             'engine'         => null,
             'options' => extension_loaded('pdo_mysql') ? array_filter([
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),

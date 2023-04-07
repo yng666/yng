@@ -18,26 +18,27 @@ return [
     // 日志通道列表
     'channels'     => [
         'file' => [
-            // 日志记录方式
-            'type'           => 'File',
-            // 日志保存目录
-            'path'           => '',
-            // 单文件日志写入
-            'single'         => false,
-            // 独立日志级别
-            'apart_level'    => [],
-            // 最大日志文件数量
-            'max_files'      => 0,
-            // 使用JSON格式记录
-            'json'           => false,
-            // 日志处理
-            'processor'      => null,
-            // 关闭通道日志写入
-            'close'          => false,
-            // 日志输出格式化
-            'format'         => '[%s][%s] %s',
-            // 是否实时写入
-            'realtime_write' => false,
+            'type'           => 'File',// 日志记录方式
+
+            'path'           => '',// 日志保存目录
+
+            'single'         => false,// 单文件日志写入
+
+            'apart_level'    => ['sql'],// 独立日志级别
+
+            'max_files'      => 0,// 最大日志文件数量
+
+            'json'           => false,// 使用JSON格式记录
+
+            'processor'      => null,// 日志处理
+
+            'close'          => false,// 关闭通道日志写入
+
+            'format'         => '[%s][%s] %s',// 日志输出格式化
+
+            'time_format'    => 'Y-m-d H:i:s',// 日期输出格式,默认c(2023-03-17T17:03:39+08:00)
+
+            'realtime_write' => false,// 是否实时写入
         ],
         // 其它日志通道配置
     ],

@@ -15,9 +15,14 @@
         "yng/yng-orm": "dev-main",
         "yng/yng-filesystem": "dev-main"
     },
+    "require-dev": {
+        "symfony/var-dumper": ">=6.0",
+        "yng/yng-trace": "dev-main"
+    },
     "autoload": {
         "psr-4": {
-            "Yng\\": "src/YngSys"
+            "Yng\\": "src/YngSys",
+            "App\\": "app"
         }
     },
 
