@@ -25,7 +25,7 @@
     },
     "require-dev": {
         "symfony/var-dumper": ">=4.2",
-        "yng/yng-trace": "^1.0"
+        "yng/yng-trace": "dev-main"
     },
     "autoload": {
         "psr-4": {
