@@ -24,7 +24,7 @@
         "yng/yng-captcha": "dev-main"
     },
     "require-dev": {
-        "symfony/var-dumper": ">=4.2",
+        "symfony/var-dumper": ">=6.0",
         "yng/yng-trace": "dev-main"
     },
     "autoload": {
