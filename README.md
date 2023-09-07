@@ -41,7 +41,7 @@ composer create-project yng/yng projectname
 
 
 # 安装dev版本
-composer 
+```sh
 composer create-project --stability=dev yng/yng projectname
 ```
 
