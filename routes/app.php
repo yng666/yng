@@ -6,4 +6,4 @@ Route::get('/', function () {
 });
 
 
-Route::get('hello/:name', '\App\Controller\Index\Index@hello');
+Route::get('hello/[:name]', '\App\Controller\Index\Index@hello');
