@@ -1,7 +1,7 @@
 <?php
 declare (strict_types = 1);
 
-namespace App;
+namespace App\Controller;
 
 use Yng\App;
 use Yng\Exception\ValidateException;
