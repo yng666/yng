@@ -22,52 +22,46 @@ return [
     'connections' => [
 
         'mysql' => [
-            'driver'         => 'mysql',
-            'url'            => env('DATABASE_URL'),
-            'host'           => env('DB_HOST', '127.0.0.1'),
-            'port'           => env('DB_PORT', '3306'),
-            'database'       => env('DB_DATABASE', 'forge'),
-            'username'       => env('DB_USERNAME', 'forge'),
-            'password'       => env('DB_PASSWORD', ''),
-            'unix_socket'    => env('DB_SOCKET', ''),
-            'charset'        => 'utf8mb4',
-            'collation'      => 'utf8mb4_unicode_ci',
-            'prefix'         => env('DB_PREFIX', ''),
-            'prefix_indexes' => true,
-            'strict'         => true,
-            'trigger_sql'    => env('APP_DEBUG', true),//是否开启sql监听
-            'engine'         => null,
-            'options' => extension_loaded('pdo_mysql') ? array_filter([
-                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
-            ]) : [],
+            'type'            => 'mysql',// 数据库类型
+            'hostname'        => env('DB_HOST', '127.0.0.1'),// 服务器地址
+            'hostport'        => env('DB_PORT', '3306'),// 端口
+            'database'        => env('DB_DATABASE', 'forge'),// 数据库名
+            'username'        => env('DB_USERNAME', 'forge'),// 用户名
+            'password'        => env('DB_PASSWORD', ''),// 密码
+            'charset'         => 'utf8mb4',// 数据库编码默认采用utf8
+            'prefix'          => env('DB_PREFIX', ''),// 数据库表前缀
+            'params'          => [],// 数据库连接参数
+            'deploy'          => 0,// 数据库部署方式:0 集中式(单一服务器),1 分布式(主从服务器)
+            'rw_separate'     => false, // 数据库读写是否分离 主从式有效
+            'master_num'      => 1,// 读写分离后 主服务器数量
+            'slave_no'        => '',// 指定从服务器序号
+            'fields_strict'   => true,// 是否严格检查字段是否存在
+            'break_reconnect' => false,// 是否需要断线重连
+            'trigger_sql'     => env('APP_DEBUG', true), // 监听SQL
+            'fields_cache'    => false, // 开启字段缓存
         ],
 
         'pgsql' => [
-            'driver'         => 'pgsql',
-            'url'            => env('DATABASE_URL'),
-            'host'           => env('DB_HOST', '127.0.0.1'),
-            'port'           => env('DB_PORT', '5432'),
+            'type'           => 'pgsql',
+            'hostname'       => env('DB_HOST', '127.0.0.1'),
+            'hostport'       => env('DB_PORT', '5432'),
             'database'       => env('DB_DATABASE', 'forge'),
             'username'       => env('DB_USERNAME', 'forge'),
             'password'       => env('DB_PASSWORD', ''),
             'charset'        => 'utf8',
             'prefix'         => env('DB_PREFIX', ''),
-            'prefix_indexes' => true,
-            'schema'         => 'public',
-            'sslmode'        => 'prefer',
         ],
 
         'sqlsrv' => [
-            'driver'         => 'sqlsrv',
-            'url'            => env('DATABASE_URL'),
-            'host'           => env('DB_HOST', 'localhost'),
-            'port'           => env('DB_PORT', '1433'),
+            'type'           => 'sqlsrv',
+            'hostname'       => env('DB_HOST', 'localhost'),
+            'hostport'       => env('DB_PORT', '1433'),
             'database'       => env('DB_DATABASE', 'forge'),
             'username'       => env('DB_USERNAME', 'forge'),
             'password'       => env('DB_PASSWORD', ''),
             'charset'        => 'utf8',
             'prefix'         => '',
-            'prefix_indexes' => true,
+           
         ],
 
     ],
