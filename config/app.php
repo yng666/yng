@@ -34,7 +34,8 @@ return [
     'http_exception_template'    =>  [
         // 定义404错误的模板文件地址
         // 404 =>  resource_path().'views'.DIRECTORY_SEPARATOR.'404.html',
-        404 =>  '/404',
+        404 =>  'error/404',
+        500 =>  'error/500',
         // // 还可以定义其它的HTTP status
         // 401 =>  \Yng\Facade\App::getAppPath() . '401.html',
     ]
