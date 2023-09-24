@@ -15,6 +15,9 @@ return [
     // 全局日志处理 支持闭包
     'processor'    => null,
 
+    // 单个日志文件大小的最大值, 2M
+    'file_size'    => 2097152,
+
     // 日志通道列表
     'channels'     => [
         'file' => [
